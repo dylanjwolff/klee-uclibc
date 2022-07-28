@@ -12,7 +12,7 @@ WGET := $(shell command -v wget 2> /dev/null)
 CURL := $(shell command -v curl 2> /dev/null)
 
 ifneq (, $(WGET))
-GET += $(WGET) --passive-ftp
+GET += $(WGET) --passive-ftp --no-check-certificate
 else
 ifneq (, $(CURL))
 GET += $(CURL) -OL
